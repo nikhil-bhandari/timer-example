@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {TimerWithHook} from "./components/timerWithHook";
+import {Timer} from "./components/timer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>10 Second</h1>
+      <TimerWithHook duration={10}/>
+      <h1>10 Second</h1>
+      <Timer duration={10}/>
+      <h1>1 Minutes</h1>
+      <TimerWithHook duration={60}/>
+      <h1>2 Minutes</h1>
+      <TimerWithHook duration={120}/>
+      <h1>7 Minutes</h1>
+      <TimerWithHook duration={7 * 60}/>
     </div>
   );
 }
